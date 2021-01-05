@@ -13,9 +13,8 @@ public class MakeStars {
                     temp += "*";
                 }
                 newLine += temp + " ";
-                System.out.println(newLine);
+            }System.out.println(newLine);
                 newLine = "";
-            }
         }
     }
 }
