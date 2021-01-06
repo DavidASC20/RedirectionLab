@@ -30,8 +30,42 @@ public class PigLatin {
         return temp;
     }
 
-    public static String pigLatinBest(String s){
-        String temp = 0;
+        public static String pigLatinBest(String s){
+            s = s.toLowerCase();
+            if (!Character.isAlphabetic(s.charAt(0))){
+              return s;
+            }
+            if (!Character.isAlphabetic(s.charAt(s.length()-1)))
+            return pigLatin(s.substring(0,s.length()-1))+s.charAt(s.length()-1);
+            else{
+              return pigLatin(s);
+            }
+          }
+          public static void main (String args[]){
+            Scanner scan=new Scanner(System.in);
+            while (scan.hasNextLine()){
+              String line=scan.nextLine();
+              String words[]=line.split(" ");
+              for (int i=0; i<words.length;i++){
+                System.out.print(pigLatinBest(words[i])+' ');
         
+              }System.out.println();
+            }
+    }
+    public static void main(String[] args) {
+        Scanner file = new Scanner(System.in);
+        while (file.hasNextLine()){
+            Scanner ine = new Scanner(file.nextLine());
+            while (line.hasNext()) {
+                String word = line.next();
+                System.out.print(pigLatinBest(word));
+                if(line.hasNext()){
+                    System.out.print(" ");
+                }
+                if (file.hasNext()){
+                    System.out.println("");
+                }
+            }
+        }
     }
 }
