@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class PigLatin {
     public static String pigLatinSimple(String s){
         String temp = "";
@@ -41,17 +42,6 @@ public class PigLatin {
               return pigLatin(s);
             }
           }
-          public static void main (String args[]){
-            Scanner scan=new Scanner(System.in);
-            while (scan.hasNextLine()){
-              String line=scan.nextLine();
-              String words[]=line.split(" ");
-              for (int i=0; i<words.length;i++){
-                System.out.print(pigLatinBest(words[i])+' ');
-        
-              }System.out.println();
-            }
-    }
     public static void main(String[] args) {
         Scanner file = new Scanner(System.in);
         while (file.hasNextLine()){
