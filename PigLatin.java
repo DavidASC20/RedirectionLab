@@ -45,7 +45,7 @@ public class PigLatin {
     public static void main(String[] args) {
         Scanner file = new Scanner(System.in);
         while (file.hasNextLine()){
-            Scanner ine = new Scanner(file.nextLine());
+            Scanner line = new Scanner(file.nextLine());
             while (line.hasNext()) {
                 String word = line.next();
                 System.out.print(pigLatinBest(word));
